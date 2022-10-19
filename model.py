@@ -30,7 +30,7 @@ def plotgraph():
 
   model = list(map(myfunc,x))
 
-  plt.title("Regression")
+  plt.title("Linear Regression")
   plt.scatter(x,y)
   plt.plot(x, model)
   plt.savefig("static/figure.png")

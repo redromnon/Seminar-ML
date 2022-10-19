@@ -14,15 +14,27 @@
     <body>
 
         <h1>SEMINAR PROJECT DEMO</h1>
+        <h3>Simple Regression Model</h3>
 
-        <img src="/static/figure.png" alt="Chart"> 
+        <p>
+            This is a very simple web app which uses linear regression ML model<br>
+            to plot a graph depending upon the user inputs - x and y.
+        </p>
+
+        <p>
+            The values for variables x and y should be positive integers only<br> 
+            and seperated with a comma (,) while keeping the number of values<br>
+            equal for both variables. 
+        </p>
+
+        <img src="/static/figure.png" alt="Chart" class="graph"> 
 
         <br />
 
         <form method="post">
-            <label>X Inputs:</label><br>
+            <label>X Inputs:</label>
             <input type="text" id="xinput" name="xinput" placeholder="1 2 3..."><br><br>
-            <label>Y Inputs:</label><br>
+            <label>Y Inputs:</label>
             <input type="text" id="yinput" name="yinput" placeholder="1 2 3..."><br><br>
             <button type="submit"> Submit </button>
         </form>
