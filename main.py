@@ -1,14 +1,18 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-from model import plotgraph, getinput
+from model import plotgraph, getinput, plottempgraph
 
 @app.route("/", methods=["GET", "POST"])
-def hello_world():
-
+def run_model():
+    
     if request.method == "POST":
-        getinput(request.form["xinput"], request.form["yinput"])
-        plotgraph()
+        
+        if request.form.get("temp"):
+            plottempgraph()
+        else:
+            getinput(request.form["xinput"], request.form["yinput"])
+            plotgraph()
 
     return render_template("page.html")
 
